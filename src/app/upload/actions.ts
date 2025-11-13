@@ -1,6 +1,6 @@
 "use server";
 
-import pdf from "pdf-parse";
+import pdf from "pdf-parse"
 import { db } from "@/lib/db-config";
 import { documents } from "@/lib/db-schema";
 import { generateEmbeddings } from "@/lib/embeddings";

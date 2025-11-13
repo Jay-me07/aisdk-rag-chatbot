@@ -2,7 +2,7 @@ import {embed, embedMany} from "ai"
 import { openai } from "@ai-sdk/openai"
 
 
-export async function generateEmbedding(text: String){
+export async function generateEmbedding(text: string){
    const input = text.replace("\n", " ");
    
    const { embedding } = await embed({
@@ -13,7 +13,7 @@ export async function generateEmbedding(text: String){
    return embedding;
 }
 
-export async function generateEmbeddings(texts: String[]){
+export async function generateEmbeddings(texts: string[]){
     const inputs = texts.map((text)=> text.replace("\n", ""))
 
     const { embeddings }  = await embedMany({
