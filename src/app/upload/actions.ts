@@ -1,6 +1,6 @@
 "use server";
 
-import pdf from "pdf-parse"
+import  pdf from 'pdf-parse'
 import { db } from "@/lib/db-config";
 import { documents } from "@/lib/db-schema";
 import { generateEmbeddings } from "@/lib/embeddings";
@@ -13,7 +13,7 @@ export async function processPdfFile(formData: FormData) {
     // Convert File to Buffer and extract text
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
-    const data = await pdf(buffer);
+    const data =  await pdf(buffer);
 
     if (!data.text || data.text.trim().length === 0) {
       return {
